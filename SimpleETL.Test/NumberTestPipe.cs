@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using DataConnectors.Adapter.FileAdapter;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SimpleETL.Commands;
 
 namespace SimpleETL.Test
 {
@@ -25,8 +23,6 @@ namespace SimpleETL.Test
 
     public class TestReaderCommand : DataCommand<string>
     {
-        public CsvAdapter Adapter { get; } = new CsvAdapter();
-
         public override IEnumerable<string> Execute(IEnumerable<string> input)
         {
             Console.WriteLine("Start importing...");
@@ -44,17 +40,10 @@ namespace SimpleETL.Test
                 yield return n.ToString();
             }
         }
-
-        public override void Dispose()
-        {
-            this.Adapter?.Dispose();
-        }
     }
 
     public class TestWriterCommand : DataCommand<string>
     {
-        public FixedTextAdapter Adapter { get; } = new FixedTextAdapter();
-
         public override IEnumerable<string> Execute(IEnumerable<string> input)
         {
             Console.WriteLine("Start exporting...");
@@ -69,11 +58,6 @@ namespace SimpleETL.Test
             {
                 Console.WriteLine(str);
             }
-        }
-
-        public override void Dispose()
-        {
-            this.Adapter?.Dispose();
         }
     }
 }

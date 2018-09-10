@@ -77,6 +77,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\Data\UnionAllCommand.cs" />
+    <Compile Include="Commands\Data\DistinctCommand.cs" />
     <Compile Include="Commands\Data\ReformatCommand.cs" />
     <Compile Include="Commands\Writer\Excel2007WriterCommand.cs" />
     <Compile Include="Commands\Writer\ExcelWriterCommand.cs" />

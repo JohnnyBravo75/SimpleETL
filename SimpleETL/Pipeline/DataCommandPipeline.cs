@@ -15,7 +15,7 @@ namespace SimpleETL
         {
             foreach (var command in this.Commands)
             {
-                input = command.Execute(input);
+                input = command.Execute(input);               
             }
 
             if (input == null)

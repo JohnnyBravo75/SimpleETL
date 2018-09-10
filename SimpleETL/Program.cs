@@ -30,6 +30,7 @@ namespace SimpleETL
                 var connInfo = new SqLiteConnectionInfo();
                 connInfo.Database = @"C:\Develop\c#\mixed\SimpleETL\SimpleETL.Test\TestData\result.sqlite";
                 dbWriter.Adapter.ConnectionInfo = connInfo;
+
                 pipe.Commands.Add(dbWriter);
 
                 pipe.Execute();
