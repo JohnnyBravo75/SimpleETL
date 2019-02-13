@@ -9,7 +9,7 @@ namespace SimpleETL
 {
     public class DataCommandPipeline<TData> : IDisposable
     {
-        public IList<DataCommand<TData>> Commands { get; set; } = new List<DataCommand<TData>>();
+        public List<DataCommand<TData>> Commands { get; set; } = new List<DataCommand<TData>>();
 
         public IEnumerable<TData> Execute(IEnumerable<TData> input = null)
         {

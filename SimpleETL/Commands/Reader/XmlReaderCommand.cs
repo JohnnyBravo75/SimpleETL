@@ -6,7 +6,7 @@ namespace SimpleETL.Commands
 {
     public class XmlReaderCommand : DataCommand<DataTable>
     {
-        public XmlAdapter Adapter { get; } = new XmlAdapter();
+        public XmlAdapter Adapter { get; set; } = new XmlAdapter();
 
         public override IEnumerable<DataTable> Execute(IEnumerable<DataTable> input)
         {

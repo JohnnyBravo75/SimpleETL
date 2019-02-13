@@ -6,7 +6,7 @@ namespace SimpleETL.Commands
 {
     public class FixedReaderCommand : DataCommand<DataTable>
     {
-        public FixedTextAdapter Adapter { get; } = new FixedTextAdapter();
+        public FixedTextAdapter Adapter { get; set; } = new FixedTextAdapter();
 
         public override IEnumerable<DataTable> Execute(IEnumerable<DataTable> input)
         {

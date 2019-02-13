@@ -6,7 +6,7 @@ namespace SimpleETL.Commands
 {
     public class ExcelReaderCommand : DataCommand<DataTable>
     {
-        public ExcelNativeAdapter Adapter { get; } = new ExcelNativeAdapter();
+        public ExcelNativeAdapter Adapter { get; set; } = new ExcelNativeAdapter();
 
         public override IEnumerable<DataTable> Execute(IEnumerable<DataTable> input)
         {

@@ -33,6 +33,7 @@ namespace SimpleETL
 
                 pipe.Commands.Add(dbWriter);
 
+                DataCommandPipeline<DataTable>.Save(@"C:\Temp\pipe.xml", pipe);
                 pipe.Execute();
 
                 Console.WriteLine("Finished");

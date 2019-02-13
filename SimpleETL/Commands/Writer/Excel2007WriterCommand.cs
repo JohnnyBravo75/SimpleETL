@@ -7,7 +7,7 @@ namespace SimpleETL.Commands
 {
     public class Excel2007WriterCommand : DataCommand<DataTable>
     {
-        public Excel2007NativeAdapter Adapter { get; } = new Excel2007NativeAdapter();
+        public Excel2007NativeAdapter Adapter { get; set; } = new Excel2007NativeAdapter();
 
         public override IEnumerable<DataTable> Execute(IEnumerable<DataTable> input)
         {

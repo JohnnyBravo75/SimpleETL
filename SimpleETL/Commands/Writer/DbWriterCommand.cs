@@ -7,7 +7,7 @@ namespace SimpleETL.Commands
 {
     public class DbWriterCommand : DataCommand<DataTable>
     {
-        public DbAdapter Adapter { get; } = new DbAdapter();
+        public DbAdapter Adapter { get; set; } = new DbAdapter();
 
         public override IEnumerable<DataTable> Execute(IEnumerable<DataTable> input)
         {

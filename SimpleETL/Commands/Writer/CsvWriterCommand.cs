@@ -7,7 +7,7 @@ namespace SimpleETL.Commands
 {
     public class CsvWriterCommand : DataCommand<DataTable>
     {
-        public CsvAdapter Adapter { get; } = new CsvAdapter();
+        public CsvAdapter Adapter { get; set; } = new CsvAdapter();
 
         public override IEnumerable<DataTable> Execute(IEnumerable<DataTable> input)
         {

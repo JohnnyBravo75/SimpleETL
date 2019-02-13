@@ -6,7 +6,7 @@ namespace SimpleETL.Commands
 {
     public class SqlReaderCommand : DataCommand<DataTable>
     {
-        public DbAdapter Adapter { get; } = new DbAdapter();
+        public DbAdapter Adapter { get; set; } = new DbAdapter();
 
         public string SqlTemplate { get; set; }
 
